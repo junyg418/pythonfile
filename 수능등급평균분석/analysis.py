@@ -13,16 +13,22 @@ for year in range(2017,2022):
         rating_value[rating].append(int(grade))
 
 
-average_value = {}
+average_value = []
 for num in range(1, 9):
-    average_value[num] = round(sum(rating_value[num])/5, 2) # 소수 2째 자리수 까지 나타냄
+    average_value.append(round(sum(rating_value[num])/5, 2)) # 소수 2째 자리수 까지 나타냄
 
-graph_type = input('1. 등급의 변화, 2. 평균 등급')
 
-if graph_type == 1:
-    x = [year for year in range(2017,2022)]
-    for rating in range(1,9):
-        y = rating_value[rating]
-        plt.plot(x, y)
-    plt.show()
-        
+plt.subplot(2,1,1)
+x = [year for year in range(2017,2022)]
+for rating in range(1,9):
+    y = rating_value[rating]
+    plt.plot(x, y, 'rs--', label =f'{rating}등급')
+plt.xlabel('year')						#x축 이름 
+plt.ylabel('grade')	               #y축 이름
+
+plt.subplot(2,1,2)
+x = [f'{i}등급' for i in range(1,9)]
+y = average_value
+plt.bar(x,y)
+
+plt.show()
