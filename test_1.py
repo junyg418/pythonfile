@@ -1,3 +1,10 @@
+'''
+설명주석
+    전국 동아리 소프트웨어 경진대회 출전 당시
+    GUI를 제작하기 위한 PyQt5 모듈 공부 겸
+    여러코드를 제작하고 지우고 반복하는 파일로 사용됨
+    초기 자료
+'''
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 from PyQt5 import QtGui
