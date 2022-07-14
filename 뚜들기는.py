@@ -1,3 +1,11 @@
+'''
+설명주석
+    30번째 줄로 인하여 datetime.now() 에 관하여 자세히 이해하게됨
+    이 파일로 다른 코드도 작성했을거라 예상
+    마지막 남은 코드는 알람 제작하는 코드
+    초기자료
+'''
+
 import time
 import datetime
 
@@ -22,4 +30,3 @@ while treeHit == 0:
 
 while True:
     datetime.datetime.now()
-    
